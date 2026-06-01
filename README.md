@@ -1,65 +1,76 @@
-DISCLAIMER: This project was built for educational and portfolio purposes. Mood prediction is inherently subjective and model performance depends heavily on the quality and diversity of the training data.
+# Podcast RSS Analyzer
 
-# Audio Mood Classifier
+A Python application that analyzes podcast RSS feeds and extracts useful information about episodes, publishing activity, and feed metadata.
 
-A machine learning project that predicts the mood of an audio clip based on its acoustic characteristics.
-
-The goal of this project was to explore how audio features can be transformed into meaningful predictions using machine learning. By analyzing properties such as tempo, energy, and frequency-related features, the model attempts to classify audio into different mood categories.
+The project demonstrates how structured podcast data can be collected, processed, and analyzed using Python.
 
 ## Why I Built This
 
-Music and audio contain patterns that humans naturally associate with emotions and moods. I wanted to better understand the machine learning workflow behind audio classification and gain hands-on experience with feature extraction, model training, and evaluation.
+Podcasts publish large amounts of information through RSS feeds, but most listeners never see the underlying data that powers podcast platforms.
 
-This project served as an opportunity to combine Python, data science, and machine learning in a real-world problem domain.
+I built this project to explore RSS parsing, API-style data processing, and data analysis techniques while working with real-world podcast datasets.
 
 ## Features
 
-- Audio file processing
-- Feature extraction from audio signals
-- Machine learning-based mood prediction
-- Model evaluation and performance metrics
-- Data preprocessing pipeline
-- Reproducible training workflow
+- RSS feed parsing
+- Episode metadata extraction
+- Podcast publishing analysis
+- Feed validation
+- Structured data processing
+- Summary statistics and reporting
 
 ## Tech Stack
 
 - Python
+- Feedparser
 - Pandas
-- NumPy
-- Scikit-learn
-- Librosa
-- Matplotlib
+- Requests
+- Streamlit
 
-## Project Workflow
+## How It Works
 
-1. Load and preprocess audio files
-2. Extract relevant audio features
-3. Prepare training and testing datasets
-4. Train machine learning models
-5. Evaluate model performance
-6. Generate mood predictions
+1. User provides a podcast RSS feed URL
+2. The application retrieves the feed
+3. Episode metadata is extracted
+4. Data is processed and analyzed
+5. Results are displayed in a simple dashboard
+
+## Example Insights
+
+The application can be used to examine:
+
+- Total episode count
+- Publishing frequency
+- Episode release trends
+- Feed metadata quality
+- Podcast activity patterns
 
 ## What I Learned
 
-Through this project I gained experience with:
+This project helped me improve my understanding of:
 
-- Audio signal processing
-- Feature engineering
-- Machine learning model development
-- Dataset preparation
-- Model evaluation techniques
-- Python data science workflows
+- RSS feed structures
+- Data ingestion pipelines
+- Working with external data sources
+- Python data processing
+- Building lightweight analytics tools
 
 ## Future Improvements
 
-- Deep learning models
-- Larger datasets
-- Real-time audio classification
-- Interactive web interface
-- Expanded mood categories
+- Multi-feed comparison
+- Podcast recommendation engine
+- Sentiment analysis of episode titles
+- Topic extraction using AI
+- Historical trend tracking
+- Exportable reports
 
 ## Running Locally
 
 ```bash
 pip install -r requirements.txt
-python app.py
+streamlit run app.py
+
+
+Notes:
+This project is intended for learning and portfolio purposes. Podcast data availability depends on the quality and structure of the RSS feed being analyzed.
+
