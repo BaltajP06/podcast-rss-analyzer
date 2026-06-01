@@ -1,57 +1,65 @@
-# Podcast RSS Analyzer
+DISCLAIMER: This project was built for educational and portfolio purposes. Mood prediction is inherently subjective and model performance depends heavily on the quality and diversity of the training data.
 
-Feed it any podcast RSS URL and get back AI-generated content intelligence — themes, audience profile, content style, growth recommendations, and competitive positioning. Full episode dataset exports to CSV automatically.
+# Audio Mood Classifier
 
-Built this because podcast networks managing dozens of shows need a faster way to audit content strategy across their catalog. Manually listening to thousands of episodes is not realistic — this does the same analysis in seconds.
+A machine learning project that predicts the mood of an audio clip based on its acoustic characteristics.
 
-## What it returns
+The goal of this project was to explore how audio features can be transformed into meaningful predictions using machine learning. By analyzing properties such as tempo, energy, and frequency-related features, the model attempts to classify audio into different mood categories.
 
-    TOP THEMES:              Celebrity Interviews, Comedy, Entertainment
-    CONTENT STYLE:           Interview
-    TARGET AUDIENCE:         Comedy enthusiasts and pop culture followers
-    POSTING PATTERN:         Consistent
-    GROWTH OPPORTUNITY:      Add audience Q&A segments to boost engagement
-    COMPETITIVE POSITIONING: Leverages host's brand for unique guest access
-    OVERALL RATING:          8.5/10
+## Why I Built This
 
-## Stack
+Music and audio contain patterns that humans naturally associate with emotions and moods. I wanted to better understand the machine learning workflow behind audio classification and gain hands-on experience with feature extraction, model training, and evaluation.
 
-- Python 3
-- OpenAI GPT-4
-- feedparser
-- pandas
-- requests
+This project served as an opportunity to combine Python, data science, and machine learning in a real-world problem domain.
 
-## Setup
+## Features
 
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    export OPENAI_API_KEY=your-key-here
-    python3 app.py
+- Audio file processing
+- Feature extraction from audio signals
+- Machine learning-based mood prediction
+- Model evaluation and performance metrics
+- Data preprocessing pipeline
+- Reproducible training workflow
 
-## Architecture
+## Tech Stack
 
-Follows an ETL pipeline pattern used in data engineering at media companies at scale.
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Librosa
+- Matplotlib
 
-- Extract — requests and feedparser pull raw episode data from any RSS feed
-- Transform — pandas structures it into clean tabular format
-- Enrich — GPT-4 runs content intelligence across the episode catalog
-- Load — exports full dataset to CSV for downstream use
+## Project Workflow
 
-Output is intentionally portable. A CSV can go into Excel, a database, a BI tool, or another pipeline without any parsing work.
+1. Load and preprocess audio files
+2. Extract relevant audio features
+3. Prepare training and testing datasets
+4. Train machine learning models
+5. Evaluate model performance
+6. Generate mood predictions
 
-## Real use cases
+## What I Learned
 
-- Podcast network content audits across 50+ shows
-- Competitive analysis for media companies
-- Content strategy optimization for new shows
-- Catalog tagging and classification at scale
+Through this project I gained experience with:
 
-## What I would add next
+- Audio signal processing
+- Feature engineering
+- Machine learning model development
+- Dataset preparation
+- Model evaluation techniques
+- Python data science workflows
 
-- Spotify Podcast API for listener demographic data
-- Sentiment analysis per episode summary
-- Streamlit dashboard with release frequency and topic trend charts
-- Scheduled runs with automated weekly email reports
-- Multi-feed batch mode for full network analysis
+## Future Improvements
+
+- Deep learning models
+- Larger datasets
+- Real-time audio classification
+- Interactive web interface
+- Expanded mood categories
+
+## Running Locally
+
+```bash
+pip install -r requirements.txt
+python app.py
